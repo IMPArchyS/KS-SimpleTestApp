@@ -1,0 +1,254 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Lecture API",
+        "version": "1.0",
+        "description": "API for managing lectures",
+        "contact": {
+            "name": "API Support",
+            "url": "http://www.example.com/support",
+            "email": "support@example.com"
+        }
+    },
+    "servers": [
+        {
+            "url": "https://node51.webte.fei.stuba.sk:669/php"
+        }
+    ],
+    "paths": {
+        "/apiCourses.php/courses": {
+            "get": {
+                "summary": "Get All courses data",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Entry not found"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a new entry",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "den": {
+                                        "type": "string"
+                                    },
+                                    "cas_od": {
+                                        "type": "string"
+                                    },
+                                    "cas_do": {
+                                        "type": "string"
+                                    },
+                                    "typ_akcie": {
+                                        "type": "string"
+                                    },
+                                    "nazov_akcie": {
+                                        "type": "string"
+                                    },
+                                    "miestnost": {
+                                        "type": "string"
+                                    },
+                                    "vyucujuci": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": ["den", "cas_od", "cas_do", "typ_akcie", "nazov_akcie", "miestnost", "vyucujuci"]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Unable to create course"
+                    },
+                    "500": {
+                        "description": "DB error"
+                    }
+                }
+            }
+        },
+        "/apiCourses.php/courses?id={id}": {
+            "get": {
+                "summary": "GET Course",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Missing Course id"
+                    },
+                    "404": {
+                        "description": "Course with id not found"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "DELETE Course",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed to delete course"
+                    },
+                    "400": {
+                        "description": "Missing Course id"
+                    },
+                    "404": {
+                        "description": "Course with id not found"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update an Course",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "den": {
+                                        "type": "string"
+                                    },
+                                    "cas_od": {
+                                        "type": "string"
+                                    },
+                                    "cas_do": {
+                                        "type": "string"
+                                    },
+                                    "typ_akcie": {
+                                        "type": "string"
+                                    },
+                                    "nazov_akcie": {
+                                        "type": "string"
+                                    },
+                                    "miestnost": {
+                                        "type": "string"
+                                    },
+                                    "vyucujuci": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed to update Course"
+                    },
+                    "400": {
+                        "description": "Missing Course id"
+                    },
+                    "404": {
+                        "description": "Course with id not found"
+                    }
+                }
+            }
+        }
+    }
+}
