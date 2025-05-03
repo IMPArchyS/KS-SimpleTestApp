@@ -1,0 +1,188 @@
+body {
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.impBold {
+    font-weight: bold !important;
+}
+
+#tableWorks_info {
+    display: none !important;
+}
+
+.dt-search {
+    display: none !important;
+}
+/* Mobile view */
+.responsive-table {
+    font-size: 0.8em; /* Adjust this value as needed */
+}
+
+.responsive-table tbody tr {
+    height: 5rem !important;
+}
+
+.responsive-table th {
+    padding: 1px !important;
+    height: 2rem !important;
+    text-align: center;
+    vertical-align: middle;
+}
+
+footer {
+    margin-top: auto;
+}
+
+a {
+    margin: 5px;
+}
+
+thead a {
+    color: darkorchid;
+}
+
+tbody a {
+    color: rgb(217, 141, 255);
+}
+
+.impFontH {
+    color: rgb(255, 87, 87) !important;
+    font-weight: bold;
+}
+
+.impFontW {
+    color: rgb(255, 110, 110) !important;
+    font-weight: bolder;
+}
+
+.fit-picture {
+    max-width: 25%;
+    max-height: 200px;
+}
+
+.impSelect {
+    background-color: #212529 !important;
+    border-color: #212529 !important;
+}
+
+.impError {
+    border: 2px solid crimson !important;
+}
+
+#feedbackToast {
+    position: fixed;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 1); /* white background */
+}
+
+.impContainer {
+    background-color: rgb(56, 64, 71);
+    opacity: 90%;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.impCurrent {
+    background-color: violet !important;
+    border-color: violet !important;
+    min-width: 3%;
+    max-width: 5%;
+    border-radius: 20px !important;
+}
+
+.impButton {
+    background-color: darkorchid !important;
+    border-color: darkorchid !important;
+    min-width: 20%;
+    max-width: 100%;
+}
+
+.impPag {
+    background-color: darkorchid !important;
+    border-color: darkorchid !important;
+    min-width: 3%;
+    max-width: 5%;
+    border-radius: 20px !important;
+}
+
+.impDeleteButton {
+    background-color: rgb(255, 59, 59) !important;
+    border-color: rgb(255, 59, 59) !important;
+    font-weight: bold !important;
+}
+
+.impEditButton {
+    background-color: lightseagreen !important;
+    border-color: lightseagreen !important;
+    font-weight: bold !important;
+}
+
+.impRedButton {
+    background-color: crimson !important;
+    border-color: crimson !important;
+    min-width: 20%;
+    max-width: 100%;
+}
+
+.impGreenButton {
+    background-color: rgb(60, 92, 197) !important;
+    border-color: rgb(60, 92, 197) !important;
+    min-width: 20%;
+    max-width: 100%;
+}
+
+.cookie-popup {
+    position: fixed;
+    transform: translateX(55%);
+    top: 30%;
+    background-color: aliceblue;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid darkorchid;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.impToastGood {
+    border: 4px solid green;
+    color: green;
+    font-weight: bold; /* make the text bolder */
+}
+
+.impToastGood * {
+    color: green;
+    font-weight: bold; /* make the text bolder */
+}
+
+.impToastBad {
+    border: 4px solid red;
+    color: red;
+    font-weight: bold; /* make the text bolder */
+}
+
+.impToastBad * {
+    color: red;
+    font-weight: bold; /* make the text bolder */
+}
+
+.impLecture {
+    background-color: rgb(32, 32, 56) !important;
+    box-shadow: none !important;
+    border: 2px rgb(190, 190, 190) solid;
+}
+
+.impCourse {
+    background-color: rgb(32, 70, 52) !important;
+    box-shadow: none !important;
+    border: 2px rgb(190, 190, 190) solid;
+}
