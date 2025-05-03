@@ -5,5 +5,12 @@
             aria-controls="navbarNavAltMarkup" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="n_bar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8082">API</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 </header>

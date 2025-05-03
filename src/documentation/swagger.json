@@ -12,7 +12,7 @@
     },
     "servers": [
         {
-            "url": "https://node51.webte.fei.stuba.sk:669/php"
+            "url": "http://localhost/php/"
         }
     ],
     "paths": {

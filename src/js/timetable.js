@@ -19,7 +19,6 @@ $(function () {
             if (courses.length === 0) return;
             // loop over the courses using forEach
             courses[0].forEach(function (course) {
-                console.log(course);
                 let td1 = document.getElementById(course.den + '-' + course.cas_od.substring(0, 5) + '-' + course.cas_od.substring(0, 2) + ':50');
                 let td2 = document.getElementById(course.den + '-' + course.cas_do.substring(0, 2) + ':00' + '-' + course.cas_do.substring(0, 5));
                 td1.innerHTML = '<div>' + course.miestnost + '<br>' + course.nazov_akcie + '<br>' + course.vyucujuci + '</div>';
@@ -122,7 +121,6 @@ $(function () {
             miestnost: $('#room').val(),
             vyucujuci: $('#teacher').val(),
         };
-        console.log(postData);
 
         event.preventDefault();
         let itemId = $('#courseId').val();
