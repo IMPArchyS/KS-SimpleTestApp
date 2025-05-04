@@ -21,7 +21,7 @@ $(function () {
             courses[0].forEach(function (course) {
                 let td1 = document.getElementById(course.den + '-' + course.cas_od.substring(0, 5) + '-' + course.cas_od.substring(0, 2) + ':50');
                 let td2 = document.getElementById(course.den + '-' + course.cas_do.substring(0, 2) + ':00' + '-' + course.cas_do.substring(0, 5));
-                td1.innerHTML = '<div>' + course.miestnost + '<br>' + course.nazov_akcie + '<br>' + course.vyucujuci + '</div>';
+                td1.innerHTML = '<div class="impInfo">' + course.miestnost + '<br>' + course.nazov_akcie + '<br>' + course.vyucujuci + '</div>';
                 td1.innerHTML +=
                     '<button id="' +
                     course.id +

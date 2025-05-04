@@ -105,7 +105,7 @@
             </div>
             <div class="form-group my-2 col-9 mx-auto">
                 <button id="submitAddButton" type="submit" class="impButton my-3 btn btn-primary">Potvrdiť</button>
-                <button id="closeAddButton" type="button" class="impGreenButton my-3 btn btn-primary">Zavrieť</button>
+                <button id="closeAddButton" type="button" class="impRedButton my-3 btn btn-primary">Zavrieť</button>
             </div>
         </form>
 
