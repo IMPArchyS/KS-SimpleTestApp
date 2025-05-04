@@ -89,7 +89,7 @@ $(function () {
 
     function deleteCourse(courseId) {
         $.ajax({
-            url: 'apiCourses.php/courses?id=' + courseId,
+            url: 'apiCourses.php/courses/' + courseId,
             method: 'DELETE',
             success: function (data) {
                 $('#RESTresponse').removeClass('text-danger');
@@ -147,7 +147,7 @@ $(function () {
         } else {
             console.log('ID: ' + itemId);
             $.ajax({
-                url: 'apiCourses.php/courses?id=' + itemId,
+                url: 'apiCourses.php/courses/' + itemId,
                 method: 'PUT',
                 contentType: 'application/json',
                 data: JSON.stringify(postData),

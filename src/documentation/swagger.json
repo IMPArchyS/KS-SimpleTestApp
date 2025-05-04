@@ -101,7 +101,7 @@
                 }
             }
         },
-        "/apiCourses.php/courses?id={id}": {
+        "/apiCourses.php/courses/{id}": {
             "get": {
                 "summary": "GET Course",
                 "parameters": [
@@ -129,9 +129,6 @@
                                 }
                             }
                         }
-                    },
-                    "400": {
-                        "description": "Missing Course id"
                     },
                     "404": {
                         "description": "Course with id not found"
@@ -166,11 +163,8 @@
                             }
                         }
                     },
-                    "500": {
+                    "405": {
                         "description": "Failed to delete course"
-                    },
-                    "400": {
-                        "description": "Missing Course id"
                     },
                     "404": {
                         "description": "Course with id not found"
@@ -238,11 +232,8 @@
                             }
                         }
                     },
-                    "500": {
+                    "405": {
                         "description": "Failed to update Course"
-                    },
-                    "400": {
-                        "description": "Missing Course id"
                     },
                     "404": {
                         "description": "Course with id not found"
