@@ -10,7 +10,6 @@ services:
         volumes:
             - ./src:/var/www/php
             - ./.docker/nginx/conf.d:/etc/nginx/conf.d
-            - ./coverage:/var/www/php/
         depends_on:
             - php
 
