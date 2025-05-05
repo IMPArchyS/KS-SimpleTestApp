@@ -1,0 +1,1 @@
+{"version":1,"defects":{"GetAllCoursesTest::testGetAllCourses":7},"times":{"CourseTest::testCourseClassExists":0.08,"CourseTest::testConstructorAcceptsPDO":0.196,"GetAllCoursesTest::testGetAllCourses":0.218,"CourseTest2::testCourseClassExists":0,"CourseTest2::testConstructorAcceptsPDO":0}}

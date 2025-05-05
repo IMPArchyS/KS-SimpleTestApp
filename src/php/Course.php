@@ -14,9 +14,7 @@ class Course
         $stmt = $this->conn->prepare($q);
         $stmt->execute();
         $courses = [];
-        while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
-            $courses[] = $row;
-        }
+        $courses[] = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $courses;
     }
 
