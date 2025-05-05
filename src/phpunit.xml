@@ -20,6 +20,10 @@
         <exclude>
             <directory>vendor</directory>
             <directory>tests</directory>
+            <file>php/footer.php</file>
+            <file>php/header.php</file>
+            <file>php/viewCourses.php</file>
+            <file>php/apiCourses.php</file>
         </exclude>
     </source>
     
